@@ -1,0 +1,15 @@
+test\java\tests\TestEngine.class
+test\java\tests\ChessTestSuite.class
+test\java\tests\TestAlphaBeta.class
+test\java\tests\TestKingSafety.class
+test\java\tests\TestIterativeDeepening.class
+test\java\tests\TestCheckmate.class
+test\java\tests\TestPawnStructure.class
+test\java\tests\TestMiniMax.class
+test\java\tests\TestCastling.class
+test\java\tests\TestFENParser.class
+test\java\tests\TestBoard.class
+test\java\tests\TestPGNParser.class
+test\java\tests\TestStaleMate.class
+test\java\tests\TestPieces.class
+test\java\tests\TestPlayer.class

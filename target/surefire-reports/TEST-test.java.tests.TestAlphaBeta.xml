@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="20" failures="6" name="test.java.tests.TestAlphaBeta" time="3,249.818" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_111\jre\bin"/>
+    <property name="java.vm.version" value="25.111-b14"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Robert\Documents\GitHub\BlackWidow-Chess"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="DE"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\Robert\Documents\GitHub\BlackWidow-Chess"/>
+    <property name="java.runtime.version" value="1.8.0_111-b14"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_111\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\Robert\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Program Files\Maven\apache-maven-3.8.1\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_111\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\libnvvp;c:\programdata\oracle\java\javapath;c:\windows\system32;c:\windows;c:\windows\system32\wbem;c:\windows\system32\windowspowershell\v1.0\;c:\program files (x86)\windows live\shared;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Program Files\Java\jdk1.8.0_111;C:\Program Files\Maven\apache-maven-3.8.1\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\PostgreSQL\10\bin;C:\Users\Robert\Desktop\SLR\mongodb-win32-x86_64-2012plus-4.2.7\bin;C:\Program Files\NVIDIA Corporation\Nsight Compute 2020.1.0\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PostgreSQL\13\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\Robert\.local\share\solana\install\active_release\bin;C:\Users\Robert\.cargo\bin;C:\Users\Robert\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\Robert\AppData\Local\Programs\Python\Python36\;C:\Users\Robert\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\Robert\AppData\Local\Programs\Python\Python37-32\;C:\Users\Robert\AppData\Roaming\local\bin;C:\Users\Robert\Anaconda3;C:\Users\Robert\Anaconda3\Scripts;C:\Users\Robert\Anaconda3\Library\bin;C:\Users\Robert\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_111\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2019.2.4\bin;;C:\texlive\2020\bin\win32;C:\Users\Robert\AppData\Local\GitHubDesktop\bin;C:\Users\Robert\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Robert\AppData\Roaming\npm;C:\Users\Robert\.dotnet\tools;."/>
+    <property name="maven.conf" value="C:\Program Files\Maven\apache-maven-3.8.1\bin\../conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Program Files\Maven\apache-maven-3.8.1\bin\..\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\Robert"/>
+    <property name="user.timezone" value="Europe/Berlin"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="Robert"/>
+    <property name="java.class.path" value="C:\Program Files\Maven\apache-maven-3.8.1\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_111\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="de"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_111"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_111\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_111\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp850"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\Maven\apache-maven-3.8.1\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp850"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="runawayPawnMakesIt" time="0.31"/>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="testGPT1" time="352.676">
+    <failure message="expected:&lt;dxc3&gt; but was:&lt;g5&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;dxc3&gt; but was:&lt;g5&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at test.java.tests.TestAlphaBeta.testGPT1(TestAlphaBeta.java:382)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>Black THINKING with depth = 6
+	StockAB(6), m: (1/45) Qxe5, best:  Qxe5 [score: 890] q: 25000, t: 10759 ms
+	StockAB(6), m: (2/45) Qe4, best:  Qxe5 [score: 890] q: 3213, t: 2193 ms
+	StockAB(6), m: (3/45) O-O, best:  O-O [score: 371] q: 25000, t: 11515 ms
+	StockAB(6), m: (4/45) dxc3, best:  dxc3 [score: 209] q: 25000, t: 11861 ms
+	StockAB(6), m: (5/45) Nxe5, best:  dxc3 [score: 209] q: 8356, t: 4070 ms
+	StockAB(6), m: (6/45) Qxf3, best:  dxc3 [score: 209] q: 568, t: 407 ms
+	StockAB(6), m: (7/45) Qxa2, best:  dxc3 [score: 209] q: 3882, t: 1162 ms
+	StockAB(6), m: (8/45) a6, best:  dxc3 [score: 209] q: 25000, t: 10504 ms
+	StockAB(6), m: (9/45) a5, best:  dxc3 [score: 209] q: 25000, t: 10383 ms
+	StockAB(6), m: (10/45) b6, best:  dxc3 [score: 209] q: 25000, t: 10242 ms
+	StockAB(6), m: (11/45) b5, best:  dxc3 [score: 209] q: 25000, t: 10508 ms
+	StockAB(6), m: (12/45) f6, best:  dxc3 [score: 209] q: 25000, t: 8756 ms
+	StockAB(6), m: (13/45) f5, best:  dxc3 [score: 209] q: 19316, t: 7264 ms
+	StockAB(6), m: (14/45) g6, best:  dxc3 [score: 209] q: 25000, t: 9511 ms
+	StockAB(6), m: (15/45) g5, best:  dxc3 [score: 209] q: 25000, t: 9572 ms
+	StockAB(6), m: (16/45) h6, best:  dxc3 [score: 209] q: 25000, t: 7410 ms
+	StockAB(6), m: (17/45) h5, best:  dxc3 [score: 209] q: 25000, t: 9667 ms
+	StockAB(6), m: (18/45) c4, best:  dxc3 [score: 209] q: 9139, t: 5079 ms
+	StockAB(6), m: (19/45) Nb8, best:  dxc3 [score: 209] q: 25000, t: 8949 ms
+	StockAB(6), m: (20/45) Nd8, best:  dxc3 [score: 209] q: 15779, t: 6688 ms
+	StockAB(6), m: (21/45) Na5, best:  dxc3 [score: 209] q: 10915, t: 5428 ms
+	StockAB(6), m: (22/45) Nb4, best:  dxc3 [score: 209] q: 25000, t: 13180 ms
+	StockAB(6), m: (23/45) Bd7, best:  dxc3 [score: 209] q: 25000, t: 10953 ms
+	StockAB(6), m: (24/45) Be6, best:  dxc3 [score: 209] q: 25000, t: 10009 ms
+	StockAB(6), m: (25/45) Bf5, best:  dxc3 [score: 209] q: 25000, t: 10311 ms
+	StockAB(6), m: (26/45) Bg4, best:  dxc3 [score: 209] q: 25000, t: 7474 ms
+	StockAB(6), m: (27/45) Bh3, best:  dxc3 [score: 209] q: 21535, t: 9833 ms
+	StockAB(6), m: (28/45) Bd8, best:  dxc3 [score: 209] q: 15072, t: 8383 ms
+	StockAB(6), m: (29/45) Bf8, best:  dxc3 [score: 209] q: 25000, t: 11220 ms
+	StockAB(6), m: (30/45) Bd6, best:  dxc3 [score: 209] q: 25000, t: 11353 ms
+	StockAB(6), m: (31/45) Bf6, best:  dxc3 [score: 209] q: 25000, t: 10990 ms
+	StockAB(6), m: (32/45) Bg5, best:  dxc3 [score: 209] q: 25000, t: 8208 ms
+	StockAB(6), m: (33/45) Bh4, best:  dxc3 [score: 209] q: 20536, t: 7804 ms
+	StockAB(6), m: (34/45) Rb8, best:  dxc3 [score: 209] q: 25000, t: 12810 ms
+	StockAB(6), m: (35/45) Rg8, best:  dxc3 [score: 209] q: 25000, t: 11176 ms
+	StockAB(6), m: (36/45) Rf8, best:  dxc3 [score: 209] q: 25000, t: 9798 ms
+	StockAB(6), m: (37/45) Qd6, best:  dxc3 [score: 209] q: 13187, t: 7184 ms
+	StockAB(6), m: (38/45) Qd7, best:  dxc3 [score: 209] q: 1322, t: 767 ms
+	StockAB(6), m: (39/45) Qd8, best:  dxc3 [score: 209] q: 7493, t: 4140 ms
+	StockAB(6), m: (40/45) Qe6, best:  dxc3 [score: 209] q: 18862, t: 7096 ms
+	StockAB(6), m: (41/45) Qc4, best:  dxc3 [score: 209] q: 1336, t: 776 ms
+	StockAB(6), m: (42/45) Qb3, best:  dxc3 [score: 209] q: 3937, t: 1180 ms
+	StockAB(6), m: (43/45) Kd8, best:  dxc3 [score: 209] q: 25000, t: 7822 ms
+	StockAB(6), m: (44/45) Kf8, best:  dxc3 [score: 209] q: 25000, t: 8185 ms
+	StockAB(6), m: (45/45) Kd7 is illegal! best: dxc3
+Black SELECTS dxc3 [#boards evaluated = 7267937, time taken = 352636 ms, rate = 20610,3
+</system-out>
+  </testcase>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="testMackHackScenario" time="292.916"/>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="testQualityFourDepth6" time="376.409">
+    <failure message="expected:&lt;h5&gt; but was:&lt;O-O&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;h5&gt; but was:&lt;O-O&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at test.java.tests.TestAlphaBeta.testQualityFourDepth6(TestAlphaBeta.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>Black THINKING with depth = 6
+	StockAB(6), m: (1/41) Qa5, best:  Qa5 [score: 69] q: 25000, t: 9484 ms
+	StockAB(6), m: (2/41) Qb4, best:  Qb4 [score: 49] q: 25000, t: 8719 ms
+	StockAB(6), m: (3/41) O-O, best:  O-O [score: 34] q: 25000, t: 9349 ms
+	StockAB(6), m: (4/41) Nxe5, best:  O-O [score: 34] q: 25000, t: 7949 ms
+	StockAB(6), m: (5/41) Nxf4, best:  O-O [score: 34] q: 25000, t: 11185 ms
+	StockAB(6), m: (6/41) Bxe5, best:  O-O [score: 34] q: 25000, t: 8760 ms
+	StockAB(6), m: (7/41) Qxb3, best:  O-O [score: 34] q: 25000, t: 22944 ms
+	StockAB(6), m: (8/41) a6, best:  O-O [score: 34] q: 25000, t: 11961 ms
+	StockAB(6), m: (9/41) a5, best:  O-O [score: 34] q: 25000, t: 11665 ms
+	StockAB(6), m: (10/41) f6, best:  f6 [score: 23] q: 25000, t: 7709 ms
+	StockAB(6), m: (11/41) f5, best:  f6 [score: 23] q: 25000, t: 7336 ms
+	StockAB(6), m: (12/41) h6, best:  f6 [score: 23] q: 25000, t: 9849 ms
+	StockAB(6), m: (13/41) h5, best:  h5 [score: -15] q: 25000, t: 8218 ms
+	StockAB(6), m: (14/41) g5, best:  h5 [score: -15] q: 25000, t: 7785 ms
+	StockAB(6), m: (15/41) c4, best:  h5 [score: -15] q: 25000, t: 6889 ms
+	StockAB(6), m: (16/41) Nb8, best:  h5 [score: -15] q: 25000, t: 7596 ms
+	StockAB(6), m: (17/41) Nd8, best:  h5 [score: -15] q: 25000, t: 6498 ms
+	StockAB(6), m: (18/41) Nce7, best:  h5 [score: -15] q: 25000, t: 7571 ms
+	StockAB(6), m: (19/41) Na5, best:  h5 [score: -15] q: 25000, t: 7291 ms
+	StockAB(6), m: (20/41) Ncb4, best:  h5 [score: -15] q: 25000, t: 7855 ms
+	StockAB(6), m: (21/41) Nc7, best:  h5 [score: -15] q: 25000, t: 7681 ms
+	StockAB(6), m: (22/41) Nde7, best:  h5 [score: -15] q: 25000, t: 6148 ms
+	StockAB(6), m: (23/41) Nf6, best:  h5 [score: -15] q: 25000, t: 6416 ms
+	StockAB(6), m: (24/41) Ndb4, best:  h5 [score: -15] q: 25000, t: 8215 ms
+	StockAB(6), m: (25/41) Nc3, best:  h5 [score: -15] q: 25000, t: 9095 ms
+	StockAB(6), m: (26/41) Ne3, best:  h5 [score: -15] q: 25000, t: 6953 ms
+	StockAB(6), m: (27/41) Bd7, best:  h5 [score: -15] q: 25000, t: 8543 ms
+	StockAB(6), m: (28/41) Bf8, best:  h5 [score: -15] q: 25000, t: 8327 ms
+	StockAB(6), m: (29/41) Bf6, best:  h5 [score: -15] q: 25000, t: 6774 ms
+	StockAB(6), m: (30/41) Bh6, best:  h5 [score: -15] q: 25000, t: 7461 ms
+	StockAB(6), m: (31/41) Rb8, best:  h5 [score: -15] q: 25000, t: 12645 ms
+	StockAB(6), m: (32/41) Rg8, best:  h5 [score: -15] q: 25000, t: 14427 ms
+	StockAB(6), m: (33/41) Rf8, best:  h5 [score: -15] q: 25000, t: 9972 ms
+	StockAB(6), m: (34/41) Qc7, best:  h5 [score: -15] q: 25000, t: 12340 ms
+	StockAB(6), m: (35/41) Qd8, best:  h5 [score: -15] q: 25000, t: 11649 ms
+	StockAB(6), m: (36/41) Qa6, best:  h5 [score: -15] q: 25000, t: 9593 ms
+	StockAB(6), m: (37/41) Qb5, best:  h5 [score: -15] q: 25000, t: 7374 ms
+	StockAB(6), m: (38/41) Kd8, best:  h5 [score: -15] q: 25000, t: 7888 ms
+	StockAB(6), m: (39/41) Kf8, best:  h5 [score: -15] q: 25000, t: 9354 ms
+	StockAB(6), m: (40/41) Kd7, best:  h5 [score: -15] q: 25000, t: 11209 ms
+	StockAB(6), m: (41/41) Ke7, best:  h5 [score: -15] q: 25000, t: 7686 ms
+Black SELECTS h5 [#boards evaluated = 6692021, time taken = 376392 ms, rate = 17779,4
+</system-out>
+  </testcase>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="testCheckmateHorizon" time="0.001"/>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="testBratcoKopec1" time="21.709"/>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="testBratcoKopec2" time="196.203">
+    <failure message="expected:&lt;Rcc2&gt; but was:&lt;e5&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;Rcc2&gt; but was:&lt;e5&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at test.java.tests.TestAlphaBeta.testBratcoKopec2(TestAlphaBeta.java:370)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>White THINKING with depth = 6
+	StockAB(6), m: (1/33) Nxa5, best:  Nxa5 [score: -215] q: 25000, t: 6847 ms
+	StockAB(6), m: (2/33) Rxc6, best:  Nxa5 [score: -215] q: 731, t: 197 ms
+	StockAB(6), m: (3/33) d5, best:  d5 [score: -40] q: 25000, t: 9226 ms
+	StockAB(6), m: (4/33) e5, best:  e5 [score: -3] q: 25000, t: 8877 ms
+	StockAB(6), m: (5/33) f5, best:  e5 [score: -3] q: 25000, t: 7545 ms
+	StockAB(6), m: (6/33) g5, best:  e5 [score: -3] q: 16044, t: 5312 ms
+	StockAB(6), m: (7/33) Nc5, best:  e5 [score: -3] q: 618, t: 719 ms
+	StockAB(6), m: (8/33) Nd2, best:  e5 [score: -3] q: 1661, t: 533 ms
+	StockAB(6), m: (9/33) Na1, best:  e5 [score: -3] q: 2125, t: 754 ms
+	StockAB(6), m: (10/33) Rc4, best:  e5 [score: -3] q: 25000, t: 7326 ms
+	StockAB(6), m: (11/33) Rc5, best:  e5 [score: -3] q: 979, t: 376 ms
+	StockAB(6), m: (12/33) Rd3, best:  e5 [score: -3] q: 25000, t: 7134 ms
+	StockAB(6), m: (13/33) Re3, best:  e5 [score: -3] q: 25000, t: 6818 ms
+	StockAB(6), m: (14/33) Rf3, best:  e5 [score: -3] q: 25000, t: 6659 ms
+	StockAB(6), m: (15/33) Rg3, best:  e5 [score: -3] q: 25000, t: 6507 ms
+	StockAB(6), m: (16/33) Rh3, best:  e5 [score: -3] q: 25000, t: 7433 ms
+	StockAB(6), m: (17/33) Rcc2, best:  Rcc2 [score: 1] q: 25000, t: 7742 ms
+	StockAB(6), m: (18/33) Rcc2, best:  Rcc2 [score: 1] q: 25000, t: 7879 ms
+	StockAB(6), m: (19/33) Rb1, best:  Rcc2 [score: 1] q: 25000, t: 7416 ms
+	StockAB(6), m: (20/33) Ra1, best:  Rcc2 [score: 1] q: 25000, t: 7979 ms
+	StockAB(6), m: (21/33) Rd1, best:  Rcc2 [score: 1] q: 25000, t: 6330 ms
+	StockAB(6), m: (22/33) Re1, best:  Rcc2 [score: 1] q: 25000, t: 7337 ms
+	StockAB(6), m: (23/33) Rf1, best:  Rcc2 [score: 1] q: 25000, t: 6949 ms
+	StockAB(6), m: (24/33) Rg1, best:  Rcc2 [score: 1] q: 25000, t: 6688 ms
+	StockAB(6), m: (25/33) Rh1, best:  Rcc2 [score: 1] q: 25000, t: 6818 ms
+	StockAB(6), m: (26/33) Ke3, best:  Rcc2 [score: 1] q: 25000, t: 6714 ms
+	StockAB(6), m: (27/33) Kf3, best:  Rcc2 [score: 1] q: 25000, t: 7061 ms
+	StockAB(6), m: (28/33) Kg3, best:  Rcc2 [score: 1] q: 25000, t: 7553 ms
+	StockAB(6), m: (29/33) Ke2, best:  Rcc2 [score: 1] q: 25000, t: 7913 ms
+	StockAB(6), m: (30/33) Kg2, best:  Rcc2 [score: 1] q: 15745, t: 4472 ms
+	StockAB(6), m: (31/33) Ke1, best:  Rcc2 [score: 1] q: 25000, t: 6378 ms
+	StockAB(6), m: (32/33) Kf1, best:  Rcc2 [score: 1] q: 25000, t: 6269 ms
+	StockAB(6), m: (33/33) Kg1, best:  Rcc2 [score: 1] q: 9171, t: 2419 ms
+White SELECTS Rcc2 [#boards evaluated = 7396868, time taken = 196201 ms, rate = 37700,5
+</system-out>
+  </testcase>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="testBratcoKopec19" time="0.441">
+    <failure message="expected:&lt;Rb8&gt; but was:&lt;d5&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;Rb8&gt; but was:&lt;d5&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at test.java.tests.TestAlphaBeta.testBratcoKopec19(TestAlphaBeta.java:394)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>Black THINKING with depth = 2
+	StockAB(2), m: (1/34) Nxf4, best:  Nxf4 [score: 410] q: 1102, t: 421 ms
+	StockAB(2), m: (2/34) Rxe4, best:  Nxf4 [score: 410] q: 2, t: 2 ms
+	StockAB(2), m: (3/34) c6, best:  c6 [score: 230] q: 0, t: 0 ms
+	StockAB(2), m: (4/34) c5, best:  c5 [score: 219] q: 0, t: 0 ms
+	StockAB(2), m: (5/34) a5, best:  c5 [score: 219] q: 0, t: 0 ms
+	StockAB(2), m: (6/34) d5, best:  c5 [score: 219] q: 0, t: 0 ms
+	StockAB(2), m: (7/34) f5, best:  c5 [score: 219] q: 0, t: 0 ms
+	StockAB(2), m: (8/34) h5, best:  h5 [score: 215] q: 0, t: 0 ms
+	StockAB(2), m: (9/34) Nf8, best:  h5 [score: 215] q: 0, t: 0 ms
+	StockAB(2), m: (10/34) Nh8, best:  h5 [score: 215] q: 0, t: 0 ms
+	StockAB(2), m: (11/34) Ne7, best:  h5 [score: 215] q: 0, t: 0 ms
+	StockAB(2), m: (12/34) Ne5, best:  h5 [score: 215] q: 0, t: 0 ms
+	StockAB(2), m: (13/34) Nh4, best:  h5 [score: 215] q: 0, t: 0 ms
+	StockAB(2), m: (14/34) Rc8, best:  h5 [score: 215] q: 0, t: 0 ms
+	StockAB(2), m: (15/34) Rb8, best:  Rb8 [score: 205] q: 0, t: 0 ms
+	StockAB(2), m: (16/34) Ra8, best:  Rb8 [score: 205] q: 0, t: 0 ms
+	StockAB(2), m: (17/34) Rf8, best:  Rb8 [score: 205] q: 0, t: 0 ms
+	StockAB(2), m: (18/34) Rg8, best:  Rb8 [score: 205] q: 0, t: 0 ms
+	StockAB(2), m: (19/34) Rh8, best:  Rb8 [score: 205] q: 0, t: 0 ms
+	StockAB(2), m: (20/34) Re7, best:  Rb8 [score: 205] q: 0, t: 0 ms
+	StockAB(2), m: (21/34) Re6, best:  Rb8 [score: 205] q: 0, t: 0 ms
+	StockAB(2), m: (22/34) Re5, best:  Rb8 [score: 205] q: 0, t: 0 ms
+	StockAB(2), m: (23/34) Qc8, best:  Rb8 [score: 205] q: 0, t: 0 ms
+	StockAB(2), m: (24/34) Qe7, best:  Rb8 [score: 205] q: 0, t: 0 ms
+	StockAB(2), m: (25/34) Qf7, best:  Rb8 [score: 205] q: 0, t: 0 ms
+	StockAB(2), m: (26/34) Qc6, best:  Rb8 [score: 205] q: 0, t: 0 ms
+	StockAB(2), m: (27/34) Qb5, best:  Rb8 [score: 205] q: 0, t: 0 ms
+	StockAB(2), m: (28/34) Qa4, best:  Rb8 [score: 205] q: 0, t: 0 ms
+	StockAB(2), m: (29/34) Qe6, best:  Rb8 [score: 205] q: 0, t: 0 ms
+	StockAB(2), m: (30/34) Qf5, best:  Rb8 [score: 205] q: 0, t: 0 ms
+	StockAB(2), m: (31/34) Qg4, best:  Rb8 [score: 205] q: 0, t: 0 ms
+	StockAB(2), m: (32/34) Qh3, best:  Rb8 [score: 205] q: 0, t: 0 ms
+	StockAB(2), m: (33/34) Kg8 is illegal! best: Rb8
+	StockAB(2), m: (34/34) Kh8, best:  Rb8 [score: 205] q: 0, t: 0 ms
+Black SELECTS Rb8 [#boards evaluated = 23426, time taken = 433 ms, rate = 54101,6
+</system-out>
+  </testcase>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="testOpeningDepth4BlackMovesFirst" time="0.475">
+    <failure message="expected:&lt;Nc6&gt; but was:&lt;e5&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;Nc6&gt; but was:&lt;e5&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at test.java.tests.TestAlphaBeta.testOpeningDepth4BlackMovesFirst(TestAlphaBeta.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR b - - 0 1
+Black THINKING with depth = 4
+	StockAB(4), m: (1/20) a6, best:  a6 [score: 103] q: 0, t: 27 ms
+	StockAB(4), m: (2/20) a5, best:  a5 [score: 55] q: 0, t: 32 ms
+	StockAB(4), m: (3/20) b6, best:  b6 [score: 50] q: 0, t: 28 ms
+	StockAB(4), m: (4/20) b5, best:  b6 [score: 50] q: 15, t: 15 ms
+	StockAB(4), m: (5/20) c6, best:  c6 [score: 45] q: 0, t: 26 ms
+	StockAB(4), m: (6/20) c5, best:  c6 [score: 45] q: 3, t: 17 ms
+	StockAB(4), m: (7/20) d6, best:  c6 [score: 45] q: 14, t: 32 ms
+	StockAB(4), m: (8/20) d5, best:  d5 [score: 29] q: 23, t: 46 ms
+	StockAB(4), m: (9/20) e6, best:  d5 [score: 29] q: 3, t: 36 ms
+	StockAB(4), m: (10/20) e5, best:  d5 [score: 29] q: 6, t: 36 ms
+	StockAB(4), m: (11/20) f6, best:  d5 [score: 29] q: 0, t: 10 ms
+	StockAB(4), m: (12/20) f5, best:  d5 [score: 29] q: 3, t: 21 ms
+	StockAB(4), m: (13/20) g6, best:  d5 [score: 29] q: 0, t: 11 ms
+	StockAB(4), m: (14/20) g5, best:  d5 [score: 29] q: 0, t: 14 ms
+	StockAB(4), m: (15/20) h6, best:  d5 [score: 29] q: 0, t: 9 ms
+	StockAB(4), m: (16/20) h5, best:  d5 [score: 29] q: 0, t: 12 ms
+	StockAB(4), m: (17/20) Na6, best:  d5 [score: 29] q: 0, t: 12 ms
+	StockAB(4), m: (18/20) Nc6, best:  Nc6 [score: 0] q: 3, t: 34 ms
+	StockAB(4), m: (19/20) Nf6, best:  Nc6 [score: 0] q: 0, t: 29 ms
+	StockAB(4), m: (20/20) Nh6, best:  Nc6 [score: 0] q: 0, t: 6 ms
+Black SELECTS Nc6 [#boards evaluated = 31410, time taken = 466 ms, rate = 67403,4
+</system-out>
+  </testcase>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="testQualityTwoDepth6" time="144.845"/>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="eloTest1" time="462.179">
+    <failure message="expected:&lt;cxd4&gt; but was:&lt;Bxa6&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;cxd4&gt; but was:&lt;Bxa6&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at test.java.tests.TestAlphaBeta.eloTest1(TestAlphaBeta.java:128)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>r1b3k1/6p1/P1n1pr1p/q1p5/1b1P4/2N2N2/PP1QBPPP/R3K2R b - - 0 1
+Black THINKING with depth = 8
+	StockAB(8), m: (1/38) cxd4, best:  cxd4 [score: 285] q: 25000, t: 22601 ms
+	StockAB(8), m: (2/38) Bxc3, best:  cxd4 [score: 285] q: 25000, t: 9685 ms
+	StockAB(8), m: (3/38) Nxd4, best:  cxd4 [score: 285] q: 25000, t: 10187 ms
+	StockAB(8), m: (4/38) Rxf3, best:  cxd4 [score: 285] q: 25000, t: 12633 ms
+	StockAB(8), m: (5/38) Bxa6, best:  cxd4 [score: 285] q: 25000, t: 30821 ms
+	StockAB(8), m: (6/38) Rxa6, best:  cxd4 [score: 285] q: 25000, t: 12317 ms
+	StockAB(8), m: (7/38) Qxa6, best:  cxd4 [score: 285] q: 25000, t: 9971 ms
+	StockAB(8), m: (8/38) Qxa2, best:  cxd4 [score: 285] q: 25000, t: 9255 ms
+	StockAB(8), m: (9/38) g6, best:  cxd4 [score: 285] q: 25000, t: 11590 ms
+	StockAB(8), m: (10/38) g5, best:  cxd4 [score: 285] q: 25000, t: 11817 ms
+	StockAB(8), m: (11/38) e5, best:  cxd4 [score: 285] q: 25000, t: 12280 ms
+	StockAB(8), m: (12/38) h5, best:  cxd4 [score: 285] q: 25000, t: 12254 ms
+	StockAB(8), m: (13/38) c4, best:  cxd4 [score: 285] q: 25000, t: 13118 ms
+	StockAB(8), m: (14/38) Nb8, best:  cxd4 [score: 285] q: 25000, t: 11366 ms
+	StockAB(8), m: (15/38) Nd8, best:  cxd4 [score: 285] q: 25000, t: 10606 ms
+	StockAB(8), m: (16/38) Na7, best:  cxd4 [score: 285] q: 25000, t: 12115 ms
+	StockAB(8), m: (17/38) Ne7, best:  cxd4 [score: 285] q: 25000, t: 12488 ms
+	StockAB(8), m: (18/38) Ne5, best:  cxd4 [score: 285] q: 25000, t: 7116 ms
+	StockAB(8), m: (19/38) Ba3, best:  cxd4 [score: 285] q: 25000, t: 9558 ms
+	StockAB(8), m: (20/38) Bb7, best:  cxd4 [score: 285] q: 25000, t: 6740 ms
+	StockAB(8), m: (21/38) Bd7, best:  cxd4 [score: 285] q: 25000, t: 11448 ms
+	StockAB(8), m: (22/38) Rb8, best:  cxd4 [score: 285] q: 25000, t: 14654 ms
+	StockAB(8), m: (23/38) Ra7, best:  cxd4 [score: 285] q: 25000, t: 14275 ms
+	StockAB(8), m: (24/38) Rf7, best:  cxd4 [score: 285] q: 25000, t: 14661 ms
+	StockAB(8), m: (25/38) Rf8, best:  cxd4 [score: 285] q: 25000, t: 14212 ms
+	StockAB(8), m: (26/38) Rg6, best:  cxd4 [score: 285] q: 25000, t: 10684 ms
+	StockAB(8), m: (27/38) Rf5, best:  cxd4 [score: 285] q: 25000, t: 13778 ms
+	StockAB(8), m: (28/38) Rf4, best:  cxd4 [score: 285] q: 25000, t: 11588 ms
+	StockAB(8), m: (29/38) Qb6, best:  cxd4 [score: 285] q: 25000, t: 13214 ms
+	StockAB(8), m: (30/38) Qc7, best:  cxd4 [score: 285] q: 25000, t: 18070 ms
+	StockAB(8), m: (31/38) Qd8, best:  cxd4 [score: 285] q: 25000, t: 9684 ms
+	StockAB(8), m: (32/38) Qb5, best:  cxd4 [score: 285] q: 25000, t: 7438 ms
+	StockAB(8), m: (33/38) Qa4, best:  cxd4 [score: 285] q: 25000, t: 6636 ms
+	StockAB(8), m: (34/38) Qa3, best:  cxd4 [score: 285] q: 25000, t: 6027 ms
+	StockAB(8), m: (35/38) Kf8, best:  cxd4 [score: 285] q: 25000, t: 12885 ms
+	StockAB(8), m: (36/38) Kh8, best:  cxd4 [score: 285] q: 25000, t: 10476 ms
+	StockAB(8), m: (37/38) Kf7, best:  cxd4 [score: 285] q: 25000, t: 12603 ms
+	StockAB(8), m: (38/38) Kh7, best:  cxd4 [score: 285] q: 25000, t: 11294 ms
+Black SELECTS cxd4 [#boards evaluated = 7795076, time taken = 462167 ms, rate = 16866,4
+</system-out>
+  </testcase>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="eloTest2" time="345.609"/>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="eloTest3" time="6.072"/>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="testAutoResponseVsPrinChess" time="216.488"/>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="testQualityDepth6" time="171.923"/>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="findMate3" time="0.743"/>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="advancedLevelProblem2NakamuraShirov" time="0.852"/>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="testQualityThreeDepth6" time="358.225"/>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="blackWidowLoss1" time="297.989"/>
+  <testcase classname="test.java.tests.TestAlphaBeta" name="testBlackInTrouble" time="3.753"/>
+</testsuite>
